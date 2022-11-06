@@ -1,0 +1,172 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    font-family: Montserrat, Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    width: min-content;
+}
+
+.left-side,
+.right-side {
+    flex: 1;
+    width: 230px;
+    height: 350px;
+}
+
+.info,
+.prices,
+.button {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.title {
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+}
+
+.title,
+.subheader {
+    color: hsl(228, 12%, 48%);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.header,
+.subheader {
+    padding-bottom: 20px;
+}
+
+.header {
+    color: hsl(212, 21%, 14%);
+}
+
+.subheader {
+    line-height: 18px;
+}
+
+.info {
+    padding-top: 20px;
+}
+
+.left-side .product-image {
+    background-image: url("images/image-product-desktop.jpg");
+    background-size: cover;
+    width: inherit;
+    height: inherit;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.right-side {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.header,
+.current-price {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+}
+
+.current-price {
+    color: hsl(152.2, 36.6%, 35.9%);
+    padding-right: 10px;
+}
+
+.previous-price {
+    color: hsl(228, 12%, 48%);
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.button {
+    padding-top: 20px;
+}
+
+.button div {
+    padding: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    background-color: hsl(152.2, 36.6%, 35.9%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.button div:hover {
+    background-color: rgb(25, 53, 40);
+}
+
+
+/* Responsiveness media query for mobile */
+
+@media screen and (max-width: 375px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .left-side,
+    .right-side {
+        width: 270px;
+        height: 200px;
+    }
+
+    .left-side .product-image {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .right-side {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .left-side .product-image {
+        background-image: url("images/image-product-mobile.jpg");
+    }
+
+    .button {
+        padding-bottom: 20px;
+    }
+}
+
+
+/* Attribution styles */
+
+.attribution {
+    padding-top: 20px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
